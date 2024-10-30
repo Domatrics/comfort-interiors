@@ -1,0 +1,155 @@
+/* Reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none !important;
+    /* Ensure no borders */
+    box-shadow: none !important;
+    /* Ensure no shadows */
+}
+
+/* Ensure white background for html and body */
+html,
+body {
+    background-color: white;
+    /* White background for the entire page */
+    font-family: 'Poppins', sans-serif;
+    /* Apply Poppins font globally */
+}
+
+/* Header specific styles */
+header {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
+/* Hero section specific styles */
+.hero-section {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
+/* Add padding and margin for spacing */
+.header-padding {
+    padding-top: 1.5rem;
+    /* Adjust top padding for header */
+    padding-bottom: 1.5rem;
+}
+
+.hero-margin-top {
+    margin-top: 1rem;
+    /* Add a small margin between header and hero section */
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #5d7360;
+    /* Adjust link hover color */
+}
+
+/* Buttons */
+button,
+a.btn {
+    display: inline-block;
+    background-color: #758F78;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+button:hover,
+a.btn:hover {
+    background-color: #5d7360;
+}
+
+/* Additional utility classes */
+.py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.pt-20 {
+    padding-top: 5rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+/* Poppins Font Class */
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+#testimonials {
+    background-color: #FAF9F4;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#testimonials img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    position: relative;
+}
+
+#testimonials .absolute.inset-0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#testimonials .absolute.inset-0.bg-black.opacity-40 {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
+}
+
+#testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#testimonials h2 {
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+#testimonials .shadow-lg {
+    transition: transform 0.3s ease-in-out;
+}
+
+#testimonials .shadow-lg:hover {
+    transform: translateY(-5px);
+}
+
+#testimonials p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+#testimonials p.text-gray-500 {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: #666;
+}
+
+@media (min-width: 1024px) {
+    #testimonials div.absolute {
+        padding: 3rem 0;
+    }
+}
