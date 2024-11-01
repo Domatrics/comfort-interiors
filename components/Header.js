@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
 
   return (
     <header className="bg-white py-6 shadow-md z-50 fixed top-0 left-0 w-full">
@@ -38,9 +39,28 @@ const Header = () => {
           <Link href="#services" className="text-gray-800 hover:text-gray-900">
             Our Services
           </Link>
-          <Link href="#portfolio" className="text-gray-800 hover:text-gray-900">
-            Portfolio
-          </Link>
+
+          {/* Portfolio Dropdown */}
+          <div 
+            className="relative text-gray-800 hover:text-gray-900"
+            onMouseEnter={() => setIsPortfolioOpen(true)}
+            onMouseLeave={() => setIsPortfolioOpen(false)}
+          >
+            <span className="flex items-center cursor-pointer">
+              Portfolio
+            </span>
+            {isPortfolioOpen && (
+              <div className="absolute top-full mt-2 w-48 bg-white shadow-lg rounded-md">
+                <Link href="/portfolio/residential-interior-design" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                  Residential Interior Design
+                </Link>
+                <Link href="/portfolio/commercial-interior-design" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                  Commercial Interior Design
+                </Link>
+              </div>
+            )}
+          </div>
+
           <Link href="#contact" className="ml-0 lg:ml-8 px-6 py-2 bg-[#758F78] text-white rounded-full hover:bg-[#5d7360] text-sm lg:text-base">
             Contact
           </Link>

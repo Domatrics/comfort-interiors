@@ -8,6 +8,8 @@ import CallToActionSection from '../components/CallToActionSection';
 import ProjectsSection from '../components/ProjectsSection';
 import WhatSetsUsApart from '../components/WhatSetsUsApart';
 import TestimonialSection from '../components/TestimonialSection';
+// import ResidentialInteriorDesign from '../pages/portfolio/residential-interior-design';
+// import CommercialInteriorDesign from '../pages/portfolio/commercial-interior-design';
 import '../styles/globals.css';
 
 export default function Home() {
@@ -21,6 +23,8 @@ export default function Home() {
       <WhatSetsUsApart />
       <TestimonialSection />
       <Footer />
+      {/* <ResidentialInteriorDesign />
+      <CommercialInteriorDesign /> */}
     </div>
   );
 }
