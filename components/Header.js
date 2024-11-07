@@ -59,7 +59,7 @@ const Header = () => {
           >
             <span className="flex items-center">Our Services</span>
             {isServicesOpen && (
-              <div className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-56 min-w-max z-20">
+              <div className="absolute top-full  bg-white shadow-lg rounded-md w-56 min-w-max z-20">
                 <Link href="/services/online-interior-designing" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   Online Interior Designing
                 </Link>
@@ -78,7 +78,7 @@ const Header = () => {
           >
             <span className="flex items-center">Portfolio</span>
             {isPortfolioOpen && (
-              <div className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-56 min-w-max z-20">
+              <div className="absolute top-full  bg-white shadow-lg rounded-md w-56 min-w-max z-20">
                 <Link href="/portfolio/residential-interior-design" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   Residential Interior Design
                 </Link>

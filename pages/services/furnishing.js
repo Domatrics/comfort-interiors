@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import "tailwindcss/tailwind.css"; // Ensure Tailwind CSS is loaded
+import FAB from '../../components/Fab'; // Import the FAB component
+import Header from '../../components/Header'; // Import the Header component
+import Footer from '../../components/Footer'; // Import the Footer component
 
 const Furnishing = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,89 +94,8 @@ const Furnishing = () => {
   return (
     <div>
        {/* Navbar */}
-      <header className="bg-white py-6 shadow-md z-50 fixed top-0 left-0 w-full">
-      <div className="container mx-auto flex justify-end items-center px-4 lg:px-20">
-        
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-gray-800 hover:text-gray-900 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-
-        {/* Navigation Links */}
-        <nav
-          className={`lg:flex lg:space-x-8 text-sm lg:text-base items-center absolute lg:static top-20 right-0 w-full lg:w-auto bg-white lg:bg-transparent transition-transform duration-300 ${
-            isOpen ? 'flex flex-col space-y-4 p-4' : 'hidden lg:flex'
-          }`}
-        >
-          <Link href="/" className="text-gray-800 hover:text-gray-900">
-            Home
-          </Link>
-          <Link href="#about" className="text-gray-800 hover:text-gray-900">
-            About Us
-          </Link>
-          <Link href="#projects" className="text-gray-800 hover:text-gray-900">
-            Projects
-          </Link>
-
-          {/* Services Dropdown */}
-          <div
-            className="relative text-gray-800 hover:text-gray-900"
-            onMouseEnter={!isMobileView ? () => setIsServicesOpen(true) : null}
-            onMouseLeave={!isMobileView ? () => setIsServicesOpen(false) : null}
-          >
-            <span
-              className="flex items-center cursor-pointer"
-              onClick={isMobileView ? () => toggleDropdown(setIsServicesOpen) : null} // Toggle on mobile
-            >
-              Our Services
-            </span>
-            {isServicesOpen && (
-              <div className={`absolute ${isMobileView ? 'left-0 mt-2 w-48' : 'top-full mt-2 w-56'} bg-white shadow-lg rounded-md z-20`}>
-                <Link href="/services/online-interior-designing" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Online Interior Designing
-                </Link>
-                <Link href="/services/furnishing" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Furnishing
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Portfolio Dropdown */}
-          <div
-            className="relative text-gray-800 hover:text-gray-900"
-            onMouseEnter={!isMobileView ? () => setIsPortfolioOpen(true) : null}
-            onMouseLeave={!isMobileView ? () => setIsPortfolioOpen(false) : null}
-          >
-            <span
-              className="flex items-center cursor-pointer"
-              onClick={isMobileView ? () => toggleDropdown(setIsPortfolioOpen) : null} // Toggle on mobile
-            >
-              Portfolio
-            </span>
-            {isPortfolioOpen && (
-              <div className={`absolute ${isMobileView ? 'left-0 mt-2 w-48' : 'top-full mt-2 w-56'} bg-white shadow-lg rounded-md z-20`}>
-                <Link href="/portfolio/residential-interior-design" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Residential Interior Design
-                </Link>
-                <Link href="/portfolio/commercial-interior-design" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Commercial Interior Design
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link href="#contact" className="ml-0 lg:ml-8 px-6 py-2 bg-[#758F78] text-white rounded-full hover:bg-[#5d7360] text-sm lg:text-base">
-            Contact
-          </Link>
-        </nav>
-      </div>
-    </header>
+      {/* Add Header component here */}
+      <Header />
 
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/furniture-hero.jpg')" }}>
@@ -280,70 +202,11 @@ const Furnishing = () => {
         </div>
       )}
       {/* Footer */}
-      <footer className="bg-[#222222] text-white py-8">
-        <div className="container mx-auto px-4 lg:px-8 space-y-8 lg:space-y-0 lg:flex lg:justify-between lg:items-start">
-          
-          {/* Left Section - Links */}
-          <div className="flex-1 space-y-3 text-center lg:text-left">
-            <ul className="text-gray-300 space-y-2">
-              <li><a href="/" className="hover:text-gray-100 text-sm">Home</a></li>
-              <li><a href="#about" className="hover:text-gray-100 text-sm">About Us</a></li>
-              <li><a href="#projects" className="hover:text-gray-100 text-sm">Projects</a></li>
-              <li><a href="#services" className="hover:text-gray-100 text-sm">Our Services</a></li>
-              <li><a href="#portfolio" className="hover:text-gray-100 text-sm">Portfolio</a></li>
-              <li><a href="#contact" className="hover:text-gray-100 text-sm">Contact Us</a></li>
-            </ul>
-          </div>
+      {/* Add Footer component here */}
+      <Footer />
 
-          {/* Middle Section - Form */}
-          <div className="flex-1 flex flex-col items-center lg:items-start">
-            <form className="space-y-4 max-w-[300px] w-full">
-              <div className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
-                <input
-                  type="text"
-                  placeholder="Your Name..."
-                  className="bg-gray-700 text-white px-3 py-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#758F78] text-sm"
-                />
-                <input
-                  type="email"
-                  placeholder="Email ID: e.g. john@gmail.com"
-                  className="bg-gray-700 text-white px-3 py-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#758F78] text-sm"
-                />
-              </div>
-              <input
-                type="text"
-                placeholder="Mobile Number..."
-                className="bg-gray-700 text-white px-3 py-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#758F78] text-sm"
-              />
-              <textarea
-                placeholder="Message..."
-                className="bg-gray-700 text-white px-3 py-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#758F78] text-sm h-20"
-              ></textarea>
-              <button className="bg-[#758F78] text-white px-4 py-2 rounded-md hover:bg-[#5d7360] text-sm w-full sm:w-auto">
-                Submit Query
-              </button>
-            </form>
-          </div>
-
-          {/* Right Section - Map */}
-          <div className="flex-1 w-full h-full">
-            <iframe
-              title="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.93763370364!2d73.01588253931355!3d19.21833043476559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be795504bf8f74f%3A0x2c3c4100a299bd18!2sThane%20-%20Dombivli%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1697027273535!5m2!1sen!2sin"
-              width="100%"
-              height="200"
-              className="rounded-md"
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="mt-6 border-t border-gray-600 pt-4 text-center text-sm">
-          <p>Copyright Comfort Interiors | Developed by Domatrics Innovation Lab</p>
-        </div>
-      </footer>
+      {/* Add FAB component here */}
+      <FAB />
     </div>
   );
 };
