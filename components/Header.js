@@ -7,6 +7,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
 
   // Detect screen size to apply mobile or desktop view
@@ -47,9 +48,21 @@ const Header = () => {
           <Link href="#about" className="text-gray-800 hover:text-gray-900">
             About Us
           </Link>
-          <Link href="#projects" className="text-gray-800 hover:text-gray-900">
-            Projects
-          </Link>
+          {/* Projects Dropdown */}
+          <div 
+            className="relative text-gray-800 hover:text-gray-900 cursor-pointer"
+            onClick={() => toggleDropdown(setIsProjectsOpen)}
+            onMouseLeave={() => !isMobileView && setIsProjectsOpen(false)}
+          >
+            <span className="flex items-center">Projects</span>
+            {isProjectsOpen && (
+              <div className="absolute top-full  bg-white shadow-lg rounded-md w-56 min-w-max z-20">
+                <Link href="/projects/ourprojects" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                  Our Projects
+                </Link>
+              </div>
+            )}
+          </div>
 
           {/* Services Dropdown */}
           <div 

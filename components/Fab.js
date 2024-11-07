@@ -16,9 +16,9 @@ const FAB = () => {
         className="w-12 h-16 flex items-center justify-center bg cursor-pointer rounded-t-md"
       >
         <img
-          src={isExpanded ? "/icons/arrow-icon.png" : "/icons/arrow-icon.png"} // Replace with actual path
+          src={isExpanded ? "/icons/arrow-down.png" : "/icons/arrow-up.png"} // Replace with actual path
           alt="Toggle FAB"
-          className="w-10 h-10" // Adjust size as needed
+          className="w-100 h-100" // Adjust size as needed
         />
       </div>
 

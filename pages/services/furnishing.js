@@ -130,7 +130,7 @@ const Furnishing = () => {
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:flex lg:flex-wrap justify-center gap-x-4 gap-y-2 text-center text-sm lg:text-base">
             {categories.map((category) => (
-              <button key={category} className="px-2 py-1 font-semibold text-gray-800 hover:text-red-600 transition" onClick={() => setSelectedCategory(category)}>
+              <button key={category} className="px-2 py-1 font-semibold text-gray-800 hover:text-[#5d7360] transition" onClick={() => setSelectedCategory(category)}>
                 {category.toUpperCase()}
               </button>
             ))}

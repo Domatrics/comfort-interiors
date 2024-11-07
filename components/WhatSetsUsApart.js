@@ -2,10 +2,10 @@
 
 const WhatSetsUsApart = () => {
   return (
-    <section className="bg-[#e2e0d6] py-12 px-6 sm:px-8 md:px-12 lg:px-20">
+    <section className="bg-[#e2e0d6] py-12 px-6 sm:px-8 md:px-12 lg:px-20" style={{ fontFamily: 'Comfortaa, sans-serif' }}>
       <div className="container mx-auto">
         
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-8 text-center sm:text-left">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl  text-black mb-8 text-center sm:text-left">
           What Sets Us Apart
         </h2>
 
