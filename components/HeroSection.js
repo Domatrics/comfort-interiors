@@ -1,10 +1,11 @@
 "use client";
+import { Montserrat } from "next/font/google";
 
 const HeroSection = () => {
   return (
-    <section className="md:h-[600px] lg:h-[700px] px-8 md:px-16 pt-28 lg:px-10 border-none shadow-none">
+    <section className="md:h-[600px] lg:h-[700px] px-8 md:px-16 pt-24 lg:px-10 border-none shadow-none">
       {/* Container for the image and content */}
-      <div className="relative w-full h-full max-w-7xl mx-auto bg-white border-none shadow-none">
+      <div className="relative w-full h-full max-w-7xl mx-auto border-none shadow-none">
         
         {/* Background Image with rounded corners */}
         <div
@@ -22,10 +23,10 @@ const HeroSection = () => {
 
         {/* Text Content */}
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-8 md:px-12 lg:px-6 pt-24 md:pt-28 lg:pt-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug" >
+          <h1 className="text-3xl md:text-4xl lg:text-5xl leading-[60px]" >
             Transform Your Space into a <br /> Dream with Comfort Interiors
           </h1>
-          <p className="mt-4 text-lg md:text-xl" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+          <p className="mt-4 text-lg md:text-xl">
             Expertly crafted designs for every Room!
           </p>
           <a

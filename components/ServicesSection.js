@@ -29,8 +29,7 @@ const ServicesSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         <h2
-          className="md:text-[32px] text-[24px] font-semibold text-center lg:text-left text-black mb-6"
-          style={{ fontFamily: "Comfortaa, sans-serif" }}
+          className="md:text-[32px] text-[24px] font-semibold text-center lg:text-left text-black mb-6" 
         >
           Our Services
         </h2>
@@ -46,12 +45,10 @@ const ServicesSection = () => {
               </div>
               <div className="mt-4">
                 <h3
-                  className="text-base text-[24px] font-semibold mb-2 text-black"
-                  style={{ fontFamily: "Comfortaa, sans-serif" }}
-                >
+                  className="text-[24px] font-bold mb-2 text-black">
                   {d.title}
                 </h3>
-                <p className="mt-2 font-montserrat text-[16px] text-black">
+                <p className="mt-2 text-[16px] text-black">
                   {d.desc}
                 </p>
               </div>
