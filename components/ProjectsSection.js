@@ -47,7 +47,7 @@ const ProjectsSection = () => {
 
         {/* View More Button */}
         <div className="flex justify-center mt-8">
-          <button className="px-6 py-3 bg-[#758F78] text-white rounded-full hover:bg-[#5d7360] transition-all duration-300">
+          <button className="px-6 py-3 bg-[#758F78] text-white rounded-lg hover:bg-[#5d7360] transition-all duration-300">
             View More
           </button>
         </div>

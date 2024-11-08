@@ -2,14 +2,12 @@
 
 const WhatSetsUsApart = () => {
   return (
-    <section className="bg-[#e2e0d6] py-12 px-6 sm:px-8 md:px-12 lg:px-20" style={{ fontFamily: 'Comfortaa, sans-serif' }}>
+    <section className="bg-[#e2e0d6] py-12 px-6 sm:px-8 md:px-[56px] lg:px-[56px]">
       <div className="container mx-auto">
         
         <h2 className="text-2xl sm:text-3xl md:text-4xl  text-black mb-8 text-center sm:text-left">
           What Sets Us Apart
         </h2>
-
-        {/* Responsive Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 
           {/* Experienced Team */}
