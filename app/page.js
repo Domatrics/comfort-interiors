@@ -14,7 +14,7 @@ import '../styles/globals.css';
 
 export default function Home() {
   return (
-    <div>
+    <div className='bg-[#FFFEF8]'>
       <Header />
       <HeroSection />
       <ServicesSection />
@@ -23,8 +23,6 @@ export default function Home() {
       <WhatSetsUsApart />
       <TestimonialSection />
       <Footer />
-      {/* <ResidentialInteriorDesign />
-      <CommercialInteriorDesign /> */}
     </div>
   );
 }
