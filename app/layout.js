@@ -1,10 +1,9 @@
 import "./globals.css";
 import Fab from '../components/Fab';
-import { Comfortaa, Montserrat } from 'next/font/google';
+import { Comfortaa} from 'next/font/google';
 
 // Configure fonts
-const comfortaa = Comfortaa({ subsets: ['latin'], weight: '400' });
-const montserrat = Montserrat({ subsets: ['latin'], weight: '400' });
+const comfortaa = Comfortaa({ subsets: ['latin']});
 
 export const metadata = {
   title: "Comfort Interiors",

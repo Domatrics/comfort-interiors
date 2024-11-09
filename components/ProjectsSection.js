@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto">
         
         {/* Left-align the heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-black mb-8 text-center sm:text-left">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-black mb-8 md:text-center sm:text-left">
           Our Projects
         </h2> 
         

@@ -25,12 +25,10 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="py-12 px-8 sm:px-10 md:px-12 lg:px-20 bg-white"
+      className="py-12 px-4 sm:px-10 md:px-12 lg:px-20 bg-white"
     >
       <div className="max-w-7xl mx-auto">
-        <h2
-          className="md:text-[32px] text-[24px] font-semibold text-center lg:text-left text-black mb-6" 
-        >
+        <h2 className="md:text-[32px] text-[24px] font-semibold md:text-center lg:text-left text-black mb-6">
           Our Services
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
@@ -44,13 +42,10 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="mt-4">
-                <h3
-                  className="text-[24px] font-bold mb-2 text-black">
+                <h3 className="text-[24px] font-bold mb-2 text-black">
                   {d.title}
                 </h3>
-                <p className="mt-2 text-[16px] text-black">
-                  {d.desc}
-                </p>
+                <p className="mt-2 text-[16px] text-black">{d.desc}</p>
               </div>
             </div>
           ))}
