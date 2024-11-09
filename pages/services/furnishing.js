@@ -92,14 +92,14 @@ const Furnishing = () => {
   const closeFullScreen = () => setFullScreenImage(null);
 
   return (
-    <div>
+    <div className='bg-[#FFFEF8]'>
        {/* Navbar */}
       {/* Add Header component here */}
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/furniture-hero.jpg')" }}>
-        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay */}
+      <section className="relative mx-16 rounded-[24px] mt-24 h-[40vh] md:h-[60vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/furniture-hero.jpg')" }}>
+        <div className="absolute inset-0 bg-black rounded-[24px] opacity-50"></div> {/* Dark overlay */}
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-3xl md:text-5xl font-bold">Furnitures</h1>
           <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg">
@@ -109,13 +109,13 @@ const Furnishing = () => {
         </div>
         
         {/* Breadcrumbs in Bottom-Left Corner */}
-        <div className="absolute bottom-4 left-4 text-sm md:text-base text-gray-200 flex space-x-2">
+        {/* <div className="absolute bottom-4 left-4 text-sm md:text-base text-gray-200 flex space-x-2">
           <Link href="/" className="hover:underline">Home</Link>
-          <span>~</span>
+          <span>/</span>
           <Link href="/services" className="hover:underline">Our services</Link>
-          <span>~</span>
+          <span>/</span>
           <span>Furnishing</span>
-        </div>
+        </div> */}
       </section>
 
       {/* Category Links or Back Button */}
@@ -130,8 +130,8 @@ const Furnishing = () => {
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:flex lg:flex-wrap justify-center gap-x-4 gap-y-2 text-center text-sm lg:text-base">
             {categories.map((category) => (
-              <button key={category} className="px-2 py-1 font-semibold text-gray-800 hover:text-[#5d7360] transition" onClick={() => setSelectedCategory(category)}>
-                {category.toUpperCase()}
+              <button key={category} className=" border-1 px-2 py-1 font-semibold text-gray-800 hover:text-[#5d7360] transition" onClick={() => setSelectedCategory(category)}>
+                {category}
               </button>
             ))}
           </div>
